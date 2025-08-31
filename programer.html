@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务器建造人员清单</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.team-members {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.member-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #3498db;
+}
+
+.member-card h2 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.member-card .position {
+    color: #7f8c8d;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.member-card .responsibilities {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.member-card .contact {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 2rem;
+}
+/* 添加响应式媒体查询 */
+@media (max-width: 768px) {
+    .team-members {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .member-card {
+        padding: 1rem;
+    }
+    
+    .member-card img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    header {
+        padding: 1.5rem 0;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .member-card h2 {
+        font-size: 1.2rem;
+    }
+    
+    .member-card .position {
+        font-size: 0.9rem;
+    }
+    
+    .member-card .responsibilities p {
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+    }
+}
+    </style>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3498db',
+                        secondary: '#2c3e50',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="bg-secondary text-white py-10 shadow-md">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold mb-2 flex items-center justify-center"><i class="fas fa-users mr-3 text-primary"></i>服务器建造人员清单</h1>
+        <p class="text-gray-300 text-lg">致力于给玩家最好的体验</p>
+    </div>
+</header>
+    <main>
+        <section class="team-members">
+            <!-- 团队成员卡片 -->
+            <div class="team-members grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 团队成员卡片 -->
+            <div class="member-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-t-4 border-primary">
+                <div class="p-6 flex flex-col items-center text-center">
+                    <img src="https://youke1.picui.cn/s1/2025/08/17/68a182220c089.jpg" alt="成员照片" class="w-32 h-32 rounded-full object-cover border-4 border-gray-200 mb-4 shadow-md">
+                    <h2 class="text-2xl font-bold text-secondary mb-2">梁猹Arthur</h2>
+                    <div class="position text-primary font-semibold mb-3 flex items-center justify-center"><i class="fas fa-crown mr-2"></i>创始人大人</div>
+                    <div class="responsibilities text-gray-600 bg-gray-50 p-3 rounded-lg w-full">
+                        <p class="flex items-start"><i class="fas fa-star text-yellow-400 mt-1 mr-2"></i>• 项目总负责人</p>
+                    </div>
+                    <a href="https://space.bilibili.com/1086656402" class="contact mt-4 bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-lg transition-colors duration-300 flex items-center"><i class="fas fa-user-circle mr-2"></i>联系他</a>
+                </div>
+            </div>
+
+            <div class="member-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-t-4 border-primary">
+                <div class="p-6 flex flex-col items-center text-center">
+                    <img src="https://youke1.picui.cn/s1/2025/08/17/68a1821a7a38f.jpg" alt="成员照片" class="w-32 h-32 rounded-full object-cover border-4 border-gray-200 mb-4 shadow-md">
+                    <h2 class="text-2xl font-bold text-secondary mb-2">机长混沌沌</h2>
+                    <div class="position text-primary font-semibold mb-3 flex items-center justify-center"><i class="fas fa-image mr-2"></i>顶级素材提供商</div>
+                    <div class="responsibilities text-gray-600 bg-gray-50 p-3 rounded-lg w-full">
+                        <p class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>• 提供高质量的游戏素材</p>
+                        <p class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>• 定期测试游戏内容</p>
+                    </div>
+                    <a href="https://space.bilibili.com/3546734575749268" class="contact mt-4 bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-lg transition-colors duration-300 flex items-center"><i class="fas fa-user-circle mr-2"></i>联系他</a>
+                </div>
+            </div>
+
+            <div class="member-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-t-4 border-primary">
+                <div class="p-6 flex flex-col items-center text-center">
+                    <img src="https://youke1.picui.cn/s1/2025/08/17/68a1822051976.jpg" alt="成员照片" class="w-32 h-32 rounded-full object-cover border-4 border-gray-200 mb-4 shadow-md">
+                    <h2 class="text-2xl font-bold text-secondary mb-2">will</h2>
+                    <div class="position text-primary font-semibold mb-3 flex items-center justify-center"><i class="fas fa-code mr-2"></i>技术开发专家</div>
+                    <div class="responsibilities text-gray-600 bg-gray-50 p-3 rounded-lg w-full">
+                        <p class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>• 建造地图</p>
+                        <p class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>• 数据包/指令开发</p>
+                        <p class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>• 测试游戏内容</p>
+                    </div>
+                    <a href="#" class="contact mt-4 bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-lg transition-colors duration-300 flex items-center"><i class="fas fa-user-circle mr-2"></i>联系他</a>
+                </div>
+            </div>
+		<div class="member-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-t-4 border-primary">
+                <div class="p-6 flex flex-col items-center text-center">
+                    <img src="https://youke1.picui.cn/s1/2025/08/17/68a1821e8e237.jpg" alt="成员照片" class="w-32 h-32 rounded-full object-cover border-4 border-gray-200 mb-4 shadow-md">
+                    <h2 class="text-2xl font-bold text-secondary mb-2">空條承太郎（黑承版）</h2>
+                    <div class="position text-primary font-semibold mb-3 flex items-center justify-center"><i class="fas fa-gem mr-2"></i>金主兼腐竹大人</div>
+                    <div class="responsibilities text-gray-600 bg-gray-50 p-3 rounded-lg w-full">
+                        <p class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>• 腐竹/金主</p>
+                    </div>
+                    <a href="https://space.bilibili.com/1900180866" class="contact mt-4 bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-lg transition-colors duration-300 flex items-center"><i class="fas fa-user-circle mr-2"></i>联系他</a>
+                </div>
+            </div>
+			<div class="member-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-t-4 border-primary">
+                <div class="p-6 flex flex-col items-center text-center">
+                    <img src="https://youke1.picui.cn/s1/2025/08/17/68a1821a7b96d.jpg" alt="成员照片" class="w-32 h-32 rounded-full object-cover border-4 border-gray-200 mb-4 shadow-md">
+                    <h2 class="text-2xl font-bold text-secondary mb-2">可爱小鼠鼠</h2>
+                    <div class="position text-primary font-semibold mb-3 flex items-center justify-center"><i class="fas fa-laptop-code mr-2"></i>全栈开发工程师</div>
+                    <div class="responsibilities text-gray-600 bg-gray-50 p-3 rounded-lg w-full">
+                        <p class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>• 前端开发</p>
+                        <p class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>• 后端开发</p>
+                    </div>
+                    <a href="https://space.bilibili.com/2011450783" class="contact mt-4 bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-lg transition-colors duration-300 flex items-center"><i class="fas fa-user-circle mr-2"></i>联系他</a>
+                </div>
+            </div>
+			<div class="member-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-t-4 border-primary">
+                <div class="p-6 flex flex-col items-center text-center">
+                    <img src="https://youke1.picui.cn/s1/2025/08/17/68a1821fcd1cd.jpg" alt="成员照片" class="w-32 h-32 rounded-full object-cover border-4 border-gray-200 mb-4 shadow-md">
+                    <h2 class="text-2xl font-bold text-secondary mb-2">fufu</h2>
+                    <div class="position text-primary font-semibold mb-3 flex items-center justify-center"><i class="fas fa-bug mr-2"></i>测试人员</div>
+                    <div class="responsibilities text-gray-600 bg-gray-50 p-3 rounded-lg w-full">
+                        <p class="flex items-start"><i class="fas fa-heart text-pink-500 mt-1 mr-2"></i>• fufu可爱捏</p>
+                    </div>
+                    <a href="https://space.bilibili.com/660120898?spm_id_from=333.788.upinfo.head.click" class="contact mt-4 bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-lg transition-colors duration-300 flex items-center"><i class="fas fa-user-circle mr-2"></i>联系他</a>
+                </div>
+            </div>
+            <div class="member-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-t-4 border-primary">
+                <div class="p-6 flex flex-col items-center text-center">
+                    <img src="https://youke1.picui.cn/s1/2025/08/31/68b3e36543d2b.jpeg" alt="成员照片" class="w-32 h-32 rounded-full object-cover border-4 border-gray-200 mb-4 shadow-md">
+                    <h2 class="text-2xl font-bold text-secondary mb-2">PigeOvO</h2>
+                    <div class="position text-primary font-semibold mb-3 flex items-center justify-center"><i class="fas fa-bug mr-2"></i>前后端/服务器</div>
+                    <div class="responsibilities text-gray-600 bg-gray-50 p-3 rounded-lg w-full">
+                        <p class="flex items-start"><i class="fas fa-heart text-pink-500 mt-1 mr-2"></i>• 情敌</p>
+                    </div>
+                    <a href="https://space.bilibili.com/660120898?spm_id_from=333.788.upinfo.head.click" class="contact mt-4 bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-lg transition-colors duration-300 flex items-center"><i class="fas fa-user-circle mr-2"></i>联系他</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-secondary text-white py-6 mt-10 shadow-inner">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-300">&copy; 2025 服务器建造团队 <i class="fas fa-heart text-primary ml-1"></i></p>
+        </div>
+    </footer>
+</body>
+<script>
+    // 修复括号匹配问题
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.member-card');
+            
+            cards.forEach(card => {
+                // 添加点击事件
+                card.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+                
+                // 添加触摸反馈
+                card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+                
+                card.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.98)';
+                    this.style.boxShadow = '0 2px 3px rgba(0,0,0,0.1)';
+                });
+                
+                card.addEventListener('touchend', function() {
+                    this.style.transform = '';
+                    this.style.boxShadow = '';
+                });
+            });
+            
+            // 返回顶部按钮
+            const backToTopBtn = document.createElement('button');
+            backToTopBtn.textContent = '↑';
+            backToTopBtn.style.position = 'fixed';
+            backToTopBtn.style.bottom = '20px';
+            backToTopBtn.style.right = '20px';
+            backToTopBtn.style.backgroundColor = '#3498db';
+            backToTopBtn.style.color = 'white';
+            backToTopBtn.style.border = 'none';
+            backToTopBtn.style.borderRadius = '50%';
+            backToTopBtn.style.width = '40px';
+            backToTopBtn.style.height = '40px';
+            backToTopBtn.style.fontSize = '20px';
+            backToTopBtn.style.cursor = 'pointer';
+            backToTopBtn.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+            backToTopBtn.style.display = 'none';
+            
+            document.body.appendChild(backToTopBtn);
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.style.display = 'block';
+                } else {
+                    backToTopBtn.style.display = 'none';
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+        }); // 确保此处有闭合的花括号和括号
+</script>
+</html>
