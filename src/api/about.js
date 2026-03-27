@@ -8,7 +8,18 @@ export const getAboutInfo = () => {
         bio: '热爱技术（存疑）。',
         techStack: [
           { 
-            name: 'Vue.js', 
+            name: 'javascript', 
+            icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="3" width="18" height="18" rx="2" fill="#f7df1e"/>
+              <text x="12" y="17" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#000000" text-anchor="middle">JS</text>
+              <circle cx="6" cy="6" r="1" fill="#000000" fill-opacity="0.3"/>
+              <circle cx="18" cy="6" r="1" fill="#000000" fill-opacity="0.3"/>
+              <circle cx="6" cy="18" r="1" fill="#000000" fill-opacity="0.3"/>
+              <circle cx="18" cy="18" r="1" fill="#000000" fill-opacity="0.3"/>
+            </svg>`
+          },
+          { 
+            name: 'VUE3', 
             icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 19L12 2L22 19H16.5L12 10.5L7.5 19H2Z" fill="#42b883"/>
               <path d="M7.5 19L12 10.5L16.5 19H7.5Z" fill="#35495e"/>
@@ -24,56 +35,16 @@ export const getAboutInfo = () => {
             </svg>`
           },
           { 
-            name: 'TypeScript', 
+            name: 'Typescript', 
             icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <rect x="3" y="3" width="18" height="18" rx="2" fill="#3178c6"/>
-              <path d="M8 16V8H10V16H8Z" fill="#ffffff"/>
-              <path d="M12 16V8H14L16 12L18 8H20V16H18V11L16 14L14 11V16H12Z" fill="#ffffff"/>
-            </svg>`
-          },
-          { 
-            name: 'Node.js', 
-            icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L4 7V17L12 22L20 17V7L12 2Z" fill="#339933"/>
-              <path d="M12 4L6 8V16L12 20L18 16V8L12 4Z" fill="#ffffff" fill-opacity="0.2"/>
-              <path d="M12 6L8 9V15L12 18L16 15V9L12 6Z" fill="#ffffff" fill-opacity="0.3"/>
-              <path d="M12 8L10 10V14L12 16L14 14V10L12 8Z" fill="#ffffff" fill-opacity="0.5"/>
-              <path d="M12 10L11 11V13L12 14L13 13V11L12 10Z" fill="#ffffff"/>
-            </svg>`
-          },
-          { 
-            name: 'Element Plus', 
-            icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="3" width="18" height="18" rx="2" fill="#409eff"/>
-              <circle cx="12" cy="12" r="6" fill="#ffffff" fill-opacity="0.2"/>
-              <circle cx="12" cy="12" r="4" fill="#ffffff" fill-opacity="0.3"/>
-              <circle cx="12" cy="12" r="2" fill="#ffffff" fill-opacity="0.5"/>
-              <circle cx="12" cy="12" r="1" fill="#ffffff"/>
-            </svg>`
-          },
-          { 
-            name: 'Vite', 
-            icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L4 20H20L12 2Z" fill="#646cff"/>
-              <path d="M12 4L6 18H18L12 4Z" fill="#ffffff" fill-opacity="0.2"/>
-              <path d="M12 6L8 16H16L12 6Z" fill="#ffffff" fill-opacity="0.3"/>
-              <path d="M12 8L10 14H14L12 8Z" fill="#ffffff" fill-opacity="0.5"/>
-              <path d="M12 10L11 12H13L12 10Z" fill="#ffffff"/>
-            </svg>`
-          },
-          { 
-            name: 'Git', 
-            icon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="4" width="16" height="16" rx="2" fill="#f05032"/>
-              <circle cx="8" cy="8" r="2" fill="#ffffff" fill-opacity="0.4"/>
-              <circle cx="16" cy="16" r="2" fill="#ffffff" fill-opacity="0.4"/>
-              <circle cx="16" cy="8" r="2" fill="#ffffff" fill-opacity="0.4"/>
-              <circle cx="8" cy="8" r="1" fill="#ffffff"/>
-              <circle cx="16" cy="16" r="1" fill="#ffffff"/>
-              <circle cx="16" cy="8" r="1" fill="#ffffff"/>
-              <path d="M8 10V16" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M16 10V14" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M8 16H16" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+              <text x="12" y="16" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">TS</text>
+              <path d="M6 6H18" stroke="#ffffff" stroke-width="0.5" stroke-linecap="round" stroke-opacity="0.3"/>
+              <path d="M6 18H18" stroke="#ffffff" stroke-width="0.5" stroke-linecap="round" stroke-opacity="0.3"/>
+              <circle cx="6" cy="6" r="0.8" fill="#ffffff" fill-opacity="0.4"/>
+              <circle cx="18" cy="6" r="0.8" fill="#ffffff" fill-opacity="0.4"/>
+              <circle cx="6" cy="18" r="0.8" fill="#ffffff" fill-opacity="0.4"/>
+              <circle cx="18" cy="18" r="0.8" fill="#ffffff" fill-opacity="0.4"/>
             </svg>`
           },
           { 
