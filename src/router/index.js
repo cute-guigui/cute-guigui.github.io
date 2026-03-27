@@ -1,10 +1,11 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Articles from '../views/Articles.vue'
 import ArticleDetail from '../views/ArticleDetail.vue'
 import Projects from '../views/Projects.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
+import Friends from '../views/Friends.vue'
 
 const routes = [
   {
@@ -36,11 +37,16 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: Contact
+  },
+  {
+    path: '/friends',
+    name: 'Friends',
+    component: Friends
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 })
 

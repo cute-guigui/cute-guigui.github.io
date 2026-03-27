@@ -2,6 +2,11 @@
   <div id="app">
     <Sidebar ref="sidebarRef" />
     
+    <!-- 移动端导航按钮 -->
+    <div class="mobile-nav-btn" @click="toggleDrawer">
+      <el-icon><Menu /></el-icon>
+    </div>
+    
     <div class="main-content">
       <router-view v-slot="{ Component }">
         <transition name="fade" mode="out-in">
@@ -14,9 +19,16 @@
 
 <script setup>
 import { ref } from 'vue'
+import { Menu } from '@element-plus/icons-vue'
 import Sidebar from './components/Sidebar.vue'
 
 const sidebarRef = ref(null)
+
+const toggleDrawer = () => {
+  if (sidebarRef.value) {
+    sidebarRef.value.toggleDrawer()
+  }
+}
 </script>
 
 <style>
@@ -43,6 +55,34 @@ body {
   min-height: 100vh;
 }
 
+.mobile-nav-btn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.mobile-nav-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+}
+
+.mobile-nav-btn .el-icon {
+  font-size: 24px;
+  color: #4a4a4a;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s ease;
@@ -57,6 +97,10 @@ body {
   .main-content {
     margin-left: 0;
     padding: 20px;
+  }
+  
+  .mobile-nav-btn {
+    display: flex;
   }
 }
 </style>

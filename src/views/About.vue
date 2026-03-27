@@ -16,7 +16,7 @@
         <h2 class="section-title">技术栈</h2>
         <div class="tech-grid">
           <div v-for="tech in aboutInfo.techStack" :key="tech.name" class="tech-card">
-            <span class="tech-icon">{{ tech.icon }}</span>
+            <span class="tech-icon" v-html="tech.icon"></span>
             <span class="tech-name">{{ tech.name }}</span>
           </div>
         </div>
@@ -39,7 +39,7 @@
         <h2 class="section-title">个人爱好</h2>
         <div class="hobbies-grid">
           <div v-for="hobby in aboutInfo.hobbies" :key="hobby.name" class="hobby-card">
-            <span class="hobby-icon">{{ hobby.icon }}</span>
+            <span class="hobby-icon" v-html="hobby.icon"></span>
             <div class="hobby-info">
               <h3 class="hobby-name">{{ hobby.name }}</h3>
               <p class="hobby-description">{{ hobby.description }}</p>
@@ -172,6 +172,16 @@ onMounted(async () => {
 
 .tech-icon {
   font-size: 24px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-icon :deep(svg) {
+  width: 100%;
+  height: 100%;
 }
 
 .tech-name {
@@ -260,6 +270,16 @@ onMounted(async () => {
 .hobby-icon {
   font-size: 32px;
   flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hobby-icon :deep(svg) {
+  width: 100%;
+  height: 100%;
 }
 
 .hobby-info {

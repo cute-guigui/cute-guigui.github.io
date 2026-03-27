@@ -37,6 +37,11 @@
         <el-icon><Message /></el-icon>
         <template #title>联系方式</template>
       </el-menu-item>
+
+      <el-menu-item index="/friends">
+        <el-icon><Link /></el-icon>
+        <template #title>友情链接</template>
+      </el-menu-item>
     </el-menu>
 
     <div class="stats-section">
@@ -56,6 +61,15 @@
         <div class="stat-info">
           <div class="stat-number">{{ stats.projects }}</div>
           <div class="stat-label">项目</div>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <el-icon><Link /></el-icon>
+        </div>
+        <div class="stat-info">
+          <div class="stat-number">{{ stats.friends }}</div>
+          <div class="stat-label">友情链接</div>
         </div>
       </div>
       <div class="stat-item">
@@ -141,6 +155,15 @@
       </div>
       <div class="stat-item">
         <div class="stat-icon">
+          <el-icon><Link /></el-icon>
+        </div>
+        <div class="stat-info">
+          <div class="stat-number">{{ stats.friends }}</div>
+          <div class="stat-label">友情链接</div>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
           <el-icon><PriceTag /></el-icon>
         </div>
         <div class="stat-info">
@@ -155,9 +178,10 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { HomeFilled, Document, User, Message, Folder, PriceTag } from '@element-plus/icons-vue'
+import { HomeFilled, Document, User, Message, Folder, PriceTag, Link } from '@element-plus/icons-vue'
 import { getArticles } from '../api/articles.js'
 import { getProjects } from '../api/projects.js'
+import { getFriends } from '../api/friends.js'
 
 const route = useRoute()
 const router = useRouter()
@@ -167,6 +191,7 @@ const isCollapsed = ref(false)
 const stats = ref({
   articles: 0,
   projects: 0,
+  friends: 0,
   tags: 0
 })
 
@@ -175,6 +200,7 @@ const activeMenu = computed(() => route.path)
 onMounted(async () => {
   const articles = await getArticles()
   const projects = await getProjects()
+  const friends = await getFriends()
   
   const allTags = new Set()
   articles.forEach(article => {
@@ -183,10 +209,14 @@ onMounted(async () => {
   projects.forEach(project => {
     project.tags.forEach(tag => allTags.add(tag))
   })
+  friends.forEach(friend => {
+    friend.tags.forEach(tag => allTags.add(tag))
+  })
   
   stats.value = {
     articles: articles.length,
     projects: projects.length,
+    friends: friends.length,
     tags: allTags.size
   }
 })
