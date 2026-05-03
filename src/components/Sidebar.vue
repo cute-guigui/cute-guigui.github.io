@@ -2,9 +2,9 @@
   <div class="sidebar">
     <div class="logo">
       <div class="avatar-container">
-        <img src="https://cdn4.winhlb.com/2026/03/21/69bea1155c14f.jpg" alt="头像" />
+        <img src="https://img.cdn1.vip/i/69f6e45732a2b_1777787991.webp" alt="头像" />
       </div>
-      <h2>可爱鼠鼠</h2>
+      <h2>开发者小k</h2>
     </div>
 
     <el-menu
@@ -97,9 +97,9 @@
     <template #header>
       <div class="drawer-header">
         <div class="drawer-avatar">
-          <img src="https://cdn4.winhlb.com/2026/03/21/69bea1155c14f.jpg" alt="头像" />
+          <img src="https://img.cdn1.vip/i/69f6e45732a2b_1777787991.webp" alt="头像" />
         </div>
-        <h2>可爱鼠鼠</h2>
+        <h2>开发者小k</h2>
       </div>
     </template>
 

@@ -3,7 +3,7 @@
     <div v-if="contactInfo" class="contact-container">
       <div class="contact-header">
         <div class="contact-avatar">
-          <img src="https://cdn4.winhlb.com/2026/03/21/69bea1155c14f.jpg" alt="头像" />
+          <img src="https://img.cdn1.vip/i/69f6e45732a2b_1777787991.webp" alt="头像" />
         </div>
         <h1 class="page-title">联系方式</h1>
         <p class="page-subtitle">欢迎与我联系，交流技术，分享经验</p>

@@ -2,9 +2,9 @@ export const getAboutInfo = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({
-        name: '开发者小鼠',
+        name: '开发者小k',
         title: '苦逼初二学生兼前端开发者',
-        avatar: 'https://cdn4.winhlb.com/2026/03/21/69bea1155c14f.jpg',
+        avatar: 'https://img.cdn1.vip/i/69f6e45732a2b_1777787991.webp',
         bio: '热爱技术（存疑）。',
         techStack: [
           { 
